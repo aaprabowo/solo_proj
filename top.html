@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> website raya </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive_.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+
+
+  <body>
+<!-- bagian ini berisi informasi induk, tombol homepage dan menu -->
+    <header>
+      <div class="container">
+        <div class="header-logo">
+          <img src="/images/logo.png">
+        </div>
+
+        <span class ="fa fa-bars menu-icon"></span>
+        <div class="header-right">
+          <a href="#"> home </a>
+          <a href="#"> about us </a>
+          <a href="#"> services </a>
+          <a href="#"> contact us </a>
+        </div>
+      </div>
+    </header>
+
+<!-- bagian ini berisi informasi utama webpage -->
+    <div class='main-content'>
+      <div class="topbanner">
+        <img class = "banner" src = "/images/banner-1.jpg">  <!-- bagian yg berisi gambar tujuan wisata -->
+        <img class = "banner" src = "/images/banner-2.jpg">
+        <img class = "banner" src = "/images/banner-3.jpg">
+      </div>
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("banner");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+    </script>
+
+      <div class = "services-wrapper"> <!-- bagian yg berisi layanan yang diberikan -->
+        <div class = "service ticket"> <!-- tombol layanan beli tiket -->
+          <a class = "btn ticket" href="/hello">
+            <img src = "/images/plane.png">
+            <p> Mau Liburan Kemana? </p>
+          </a>
+        </div>
+        <div class = "service hotel"> <!-- tombol layanan booking hotel -->
+          <a class = "btn hotel" href= "/hello">
+            <img src = "/images/hotel.png">
+            <p> Mau Nginep Dimana? </p>
+          </a>
+        </div>
+        <div class = "service vehicle"> <!-- tombol layanan sewa kendaraan -->
+          <a class = "btn vehicle" href="/hello">
+            <img src = "/images/car-rent.png">
+            <p> Mau <i>explore</i> naik apa? </p>
+          </a>
+        </div>
+        <div class = "service comm-device"> <!-- tombol layanan sewa wifi/modem -->
+          <a class = "btn comm-device" href="/hello">
+            <img src = "/images/modem.png">
+            <p> Mau tetep <i>exist</i> ?? </p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class='add-content'>
+      <div class= 'wrapper'>
+        <h2> Bergabunglah dengan komunitas open-tour di kota Anda! </h2>
+        <span class="btn message">Forum Open-Tour</span>
+
+        <div class='soc-med'>
+        <p>atau follow kami di:</p>
+        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebook</a>
+        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitter</a>
+        </div>
+      </div>  
+    </div>
+
+
+
+
+    <footer>
+        <img src="/images/logo.png">
+        <p>Dimana-mana hatiku senang</p>
+           
+    </footer>
+
+  </body>
+
+
+</html>
